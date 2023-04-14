@@ -2,5 +2,4 @@
 
 Arquivo do Projeto do TCC
 
-Por enquanto só está funcionado o login e cadastro
-Testarei o CSS mais tarde
+Por enquanto só telas estão funcionando
