@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Controle de Fiscalização de Escolas</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			text-align: center;
+			margin: 30px 0;
+		}
+
+		form {
+			max-width: 600px;
+			margin: 0 auto;
+			background-color: #fff;
+			padding: 30px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			border-radius: 5px;
+		}
+
+		label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		select {
+			padding: 10px;
+			border: none;
+			border-radius: 3px;
+			background-color: #f0f0f0;
+			margin-bottom: 20px;
+			width: 100%;
+		}
+
+		button {
+			background-color: #0077cc;
+			color: #fff;
+			padding: 10px;
+			border: none;
+			border-radius: 3px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			width: 100%;
+		}
+
+		button:hover {
+			background-color: #005fa3;
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 30px 0;
+		}
+
+		li {
+			margin-bottom: 10px;
+			padding: 10px;
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			border-radius: 5px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		li.fiscalizada {
+			background-color: #a3d9a5;
+		}
+
+		li.nao-apta {
+			background-color: #ff8a80;
+		}
+
+		li.apta {
+			background-color: #e6ee9c;
+		}
+
+		li span {
+			font-weight: bold;
+		}
+
+		.checkbox-group {
+			margin-bottom: 20px;
+		}
+
+		.checkbox-group label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+
+		.checkbox-group input[type="checkbox"] {
+			margin-right: 10px;
+		}
+        label {
+			display: block;
+			margin-top: 10px;
+		}
+
+		input[type="submit"] {
+			margin-top: 20px;
+		}
+
+		.checkboxes {
+			display: block;
+			margin-top: 10px;
+		}
+
+		.checkboxes label {
+			display: inline-block;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Controle de Fiscalização de Escolas</h1>
+	<form>
+		<label for="escola">Escola:</label>
+		<select id="escola" name="escola">
+			<option value="escola1">Escola 1</option>
+			<option value="escola2">Escola 2</option>
+			<option value="escola3">Escola 3</option>
+			<option value="escola4">Escola 4</option>
+		</select>
+        <div class="checkboxes">
+			<label for="fiscalizada">Fiscalizada:</label>
+			<label for="fiscalizada_sim"><input type="checkbox" id="fiscalizada_sim" name="fiscalizada" value="sim">Sim</label>
+			<label for="fiscalizada_nao"><input type="checkbox" id="fiscalizada_nao" name="fiscalizada" value="nao">Não</label>
+		</div>
+		<div class="checkboxes">
+			<label for="apta">Apta para trabalhar:</label>
+			<label for="apta_sim"><input type="checkbox" id="apta_sim" name="apta" value="sim">Sim</label>
+			<label for="apta_nao"><input type="checkbox" id="apta_nao" name="apta" value="nao">Não</label>
+		</div>
+		<input type="submit" value="Enviar">
+	</form>
+</body>
+</html>

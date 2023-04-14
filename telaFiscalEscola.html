@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulário de Fiscalização de Escolas</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 30px;
+		}
+
+		form {
+			max-width: 500px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #f1f1f1;
+			border-radius: 10px;
+		}
+
+		label {
+			display: block;
+			margin-top: 10px;
+		}
+
+		input[type="submit"] {
+			margin-top: 20px;
+			padding: 10px 20px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+
+		.checkboxes {
+			display: block;
+			margin-top: 10px;
+		}
+
+		.checkboxes label {
+			display: inline-block;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Formulário de Fiscalização de Escolas</h1>
+	<form>
+		<label for="escola">Escola:</label>
+		<select id="escola" name="escola">
+			<option value="escola1">Escola 1</option>
+			<option value="escola2">Escola 2</option>
+			<option value="escola3">Escola 3</option>
+			<option value="escola4">Escola 4</option>
+		</select>
+		<div class="checkboxes">
+			<label for="lousa">Lousa:</label>
+			<label for="lousa_sim"><input type="checkbox" id="lousa_sim" name="lousa" value="sim">Sim</label>
+			<label for="lousa_nao"><input type="checkbox" id="lousa_nao" name="lousa" value="nao">Não</label>
+		</div>
+		<div class="checkboxes">
+			<label for="projetor">Projetor:</label>
+			<label for="projetor_sim"><input type="checkbox" id="projetor_sim" name="projetor" value="sim">Sim</label>
+			<label for="projetor_nao"><input type="checkbox" id="projetor_nao" name="projetor" value="nao">Não</label>
+		</div>
+		<input type="submit" value="Enviar">
+	</form>
+</body>
+</html>
