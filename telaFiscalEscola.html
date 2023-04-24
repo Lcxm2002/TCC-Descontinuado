@@ -81,11 +81,11 @@
 	</form>
 	<script>
 		const checkboxes = document.querySelectorAll('.checkbox-row input[type="checkbox"]');
-checkboxes.forEach(checkbox => {
-  checkbox.addEventListener('click', () => {
-    if (checkbox.checked) {
-      checkboxes.forEach(cb => {
-        if (cb !== checkbox && cb.closest('.checkbox-row') === checkbox.closest('.checkbox-row')) {
+		checkboxes.forEach(checkbox => {
+  			checkbox.addEventListener('click', () => {
+    			if (checkbox.checked) {
+      				checkboxes.forEach(cb => {
+        		if (cb !== checkbox && cb.closest('.checkbox-row') === checkbox.closest('.checkbox-row')) {
           cb.checked = false;
         }
       });
