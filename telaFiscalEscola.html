@@ -61,17 +61,38 @@
 			<option value="escola3">Escola 3</option>
 			<option value="escola4">Escola 4</option>
 		</select>
-		<div class="checkboxes">
-			<label for="lousa">Lousa:</label>
-			<label for="lousa_sim"><input type="checkbox" id="lousa_sim" name="lousa" value="sim">Sim</label>
-			<label for="lousa_nao"><input type="checkbox" id="lousa_nao" name="lousa" value="nao">Não</label>
+		<div class="checkbox-row">
+			<label for="estrutura">Estrutura adequada para os alunos:</label>
+			<label for="estrutura_sim"><input type="checkbox" id="estrutura_sim" name="estrutura" value="sim" onclick="uncheckAllExcept(this)">Sim</label>
+			<label for="estrutura_nao"><input type="checkbox" id="estrutura_nao" name="estrutura" value="nao" onclick="uncheckAllExcept(this)">Não</label>
+
 		</div>
-		<div class="checkboxes">
-			<label for="projetor">Projetor:</label>
-			<label for="projetor_sim"><input type="checkbox" id="projetor_sim" name="projetor" value="sim">Sim</label>
-			<label for="projetor_nao"><input type="checkbox" id="projetor_nao" name="projetor" value="nao">Não</label>
+		<div class="checkbox-row">
+			<label for="estrutura_prof">Estrutura adequada para os professores:</label>
+			<label for="estrutura_prof_sim"><input type="checkbox" id="estrutura_prof_sim" name="estrutura_prof" value="sim" onclick="uncheckAllExcept(this)">Sim</label>
+			<label for="estrutura_prof_nao"><input type="checkbox" id="estrutura_prof_nao" name="estrutura_prof" value="nao" onclick="uncheckAllExcept(this)">Não</label>
+		</div>
+		<div class="checkbox-row">
+			<label for="estrutura_diretores">Estrutura adequada para os diretores:</label>
+			<label for="estrutura_diretores_sim"><input type="checkbox" id="estrutura_diretores_sim" name="estrutura_diretores" value="sim" onclick="uncheckAllExcept(this)">Sim</label>
+			<label for="estrutura_diretores_nao"><input type="checkbox" id="estrutura_diretores_nao" name="estrutura_diretores" value="nao" onclick="uncheckAllExcept(this)">Não</label>
 		</div>
 		<input type="submit" value="Enviar">
 	</form>
+	<script>
+		const checkboxes = document.querySelectorAll('.checkbox-row input[type="checkbox"]');
+checkboxes.forEach(checkbox => {
+  checkbox.addEventListener('click', () => {
+    if (checkbox.checked) {
+      checkboxes.forEach(cb => {
+        if (cb !== checkbox && cb.closest('.checkbox-row') === checkbox.closest('.checkbox-row')) {
+          cb.checked = false;
+        }
+      });
+    }
+  });
+});
+	</script>	
 </body>
 </html>
+
